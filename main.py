@@ -1,13 +1,12 @@
 import asyncio
 import logging
 import sys
+from bot.handlers.registration_handlers import command_reg
 from bot.handlers.handlers import cmd_start, echo_handler
 from loader import dp, bot
 
 
 async def main() -> None:
-    dp.message.register(cmd_start)
-    dp.message.register(echo_handler)
     await dp.start_polling(bot)
 
 
